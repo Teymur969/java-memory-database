@@ -65,5 +65,21 @@ public class CarConsole {
     }
 
     public static void deleteCar() {
+        for (int i = 0; i < carStorage.count(); i++) {
+            Car car = carStorage.getCar(i);
+            Integer currentIndex = i + 1;
+            System.out.println(currentIndex + " " + car.getManufacturer() + " " + car.getModel() + " " + car.getYear());
+        }
+
+        System.out.println("");
+        System.out.print("Please enter car's index: ");
+        String indexStr = System.console().readLine();
+        Integer index = Integer.parseInt(indexStr);
+
+        System.out.println(carStorage.count());
+
+        if (index > carStorage.count() || index < 1) {
+            System.out.println("Wrong car index!");
+            return;
     }
 }
