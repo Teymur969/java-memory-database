@@ -33,7 +33,10 @@ public class Console {
             CarConsole.newCar();
         } else if (command.equals("2")) {
             CarConsole.updateCar();
-        } else if (command.equals("5")) {
+        } else if (command.equals("3")){
+            CarConsole.deleteCar();
+        }
+        else if (command.equals("5")) {
             CarConsole.listCars();
         } else {
             command = "100";

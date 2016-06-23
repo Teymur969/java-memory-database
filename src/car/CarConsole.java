@@ -64,4 +64,6 @@ public class CarConsole {
         }
     }
 
+    public static void deleteCar() {
+    }
 }
